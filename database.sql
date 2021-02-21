@@ -20,3 +20,8 @@ CREATE TABLE job_history(
     job_id int, 
     department_id int
 );
+SELECT * FROM products;
+SELECT product_name, quantity_per_unit FROM products;
+SELECT id FROM products;
+SELECT product_name FROM products;
+SELECT discontinued, product_name FROM products;

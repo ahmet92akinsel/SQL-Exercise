@@ -21,7 +21,22 @@ CREATE TABLE job_history(
     department_id int
 );
 SELECT * FROM products;
+/* available products*/
+SELECT product_name, id FROM products 
+WHERE discontinued = 0;
+/*discontinued products*/
+SELECT product_name, id FROM products 
+WHERE discontinued = 1;
 SELECT product_name, quantity_per_unit FROM products;
 SELECT id FROM products;
 SELECT product_name FROM products;
 SELECT discontinued, product_name FROM products;
+/* most expensive product and product name */
+SELECT product_name, list_price FROM products WHERE list_price = (SELECT MAX(list_price) FROM products);
+/* least expensive product and product name */
+SELECT product_name, list_price FROM products WHERE list_price = (SELECT MIN(list_price) FROM products);
+SELECT * FROM products WHERE list_price < 20;
+SELECT * FROM products WHERE list_price BETWEEN 15 AND 25;
+SELECT list_price FROM products ORDER BY list_price LIMIT 10;
+SELECT COUNT(list_price) FROM  products WHERE discontinued = 0;
+SELECT COUNT(list_price) FROM  products WHERE discontinued = 1;

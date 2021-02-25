@@ -3,7 +3,7 @@ SELECT * FROM order_details;
 SELECT * FROM invoices;
 
 DELETE FROM invoices
-WHERE order_id= 30;
+WHERE order_id=30;
 
 
 DELETE FROM order_details
